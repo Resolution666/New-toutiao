@@ -1,23 +1,23 @@
 <template>
-    <div class="collect">
-        <WzCell v-for="n in 10" :key="n"></WzCell>
+    <div class="crossTalk">
+        <DuanZi />
     </div>
 </template>
 
 
 <script>
-import WzCell from '../components/wz-cell'
+import DuanZi from '../components/duanzi'
 
 export default {
     components:{
-        WzCell
+        DuanZi
     }
 }
 </script>
 
 <style lang="scss" scoped>
 
-    .collect{
+    .crossTalk{
         margin-top: .8rem;
     }
 </style>

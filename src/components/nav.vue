@@ -27,16 +27,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .box{width: 100%;overflow: auto;}
+    .box{width: 100%;overflow: auto;position:fixed;top:.94rem;left:0;}
     .nav{
-        height:.7rem;background:#eeeeee;margin-top: .94rem;
+        height:.7rem;background:#eeeeee;
         width:140%;
         ul{
             display: flex;
-            justify-content: space-around;
             overflow: auto;
             li{
-                font:.3rem/.7rem "";color:#000000;
+                font:.32rem/.7rem "";color:#000000;
+                margin-left: .2rem;
                 &.active{
                       color:#ff6347;
                 }

@@ -1,17 +1,17 @@
 <template>
     <div class="footer">
-        <li  class="navItem">
+        <router-link to="/home" tag="li" active-class="active"  class="navItem">
             <span class="active">首页</span>
-        </li>
-        <li  class="navItem">
+        </router-link>
+        <router-link to="/collect" tag="li" active-class="active" class="navItem">
             <span>收藏</span>
-        </li>
-        <li  class="navItem">
+        </router-link>
+        <router-link to="/crossTalk" tag="li" active-class="active" class="navItem">
             <span>段子</span>
-        </li>
-        <li  class="navItem">
+        </router-link>
+        <router-link to="/user" tag="li" active-class="active" class="navItem">
             <span>我的</span>
-        </li>
+        </router-link>
     </div>
 </template>
 
@@ -41,14 +41,14 @@ export default {
       flex-direction: column;
       justify-content: center;
       color: #777;
+      &.active{
+            color:#ff6347;
+        }
       .navItem-icon {
         font-size: .35rem;
       }
       span {
         font-size: .22rem;
-        &.active{
-            color:#ff6347;
-        }
       }
     }
   }

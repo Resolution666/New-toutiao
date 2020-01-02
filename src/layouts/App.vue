@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <Nav />
-    <Home />
+    <!-- <Header></Header> -->
+    <Back />
+    <CrossTalk />
+    <!-- <router-view></router-view> -->
     <Footer />
   </div>
 </template>
 
 <script>
-import Home from '../pages/home'
+import CrossTalk from '../pages/crossTalk'
 import Header from './header'
 import Footer from './footer'
-import Nav from '../components/nav'
+import Back from '../components/back'
 
 export default {
   name:"app",
@@ -21,7 +22,7 @@ export default {
     }
   },
   components:{
-    Home,Footer,Header,Nav
+    CrossTalk,Footer,Header,Back
   },
   mounted() {
     

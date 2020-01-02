@@ -1,6 +1,6 @@
 <template>
     <div class="crossTalk">
-        <DuanZi />
+        <DuanZi v-for="n in 10" :key="n" />
     </div>
 </template>
 
@@ -18,6 +18,6 @@ export default {
 <style lang="scss" scoped>
 
     .crossTalk{
-        margin-top: .8rem;
+        margin-top: .94rem;
     }
 </style>

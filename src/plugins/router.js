@@ -7,6 +7,7 @@ import Home from '../pages/home.vue'
 import Collect from '../pages/collect'
 import CrossTalk from '../pages/crossTalk'
 import NoPage from '../pages/404'
+import User from '../pages/user'
 
 let routes = [
     {
@@ -21,7 +22,13 @@ let routes = [
     },
     {
         path:'/crosstalk',
+        name:"crosstalk",
         component:CrossTalk
+    },
+    {
+        path:'/user',
+        name:"User",
+        component:User
     },
     {
         path:"/",

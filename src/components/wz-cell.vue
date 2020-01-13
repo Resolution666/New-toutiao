@@ -1,9 +1,9 @@
 <template>
-    <div class="nav">
-        <h3>习近平对京张高铁开通运营作出重要指示强调 京张高铁建成投运意义重大 冬奥会各项筹备工作都要高标准高质量推进</h3>
+    <div class="nav" @click="get">
+        <h3>{{data.title}}</h3>
         <div class="bottom">
-            <div class="b-l">新华设&nbsp;&nbsp;&nbsp;&nbsp;<span>评论:411</span></div>
-            <div class="b-r">2019-12-23</div>
+            <div class="b-l">{{data.detail.auth}}&nbsp;&nbsp;&nbsp;&nbsp;<span>评论:{{data.comment}}</span></div>
+            <div class="b-r">{{data.time | date}}</div>
         </div>
     </div>
 </template>
@@ -11,7 +11,22 @@
 
 <script>
 export default {
-    
+    props:{
+        data:{
+            type:[Object],
+            required:true
+        },
+        dataName:{
+            type:String,
+            required:true
+        }
+    },
+    methods:{
+        get(){
+            // console.log("/detail/"+this.data._id+"?dataName="+this.dataName)
+            this.$router.push("/detail/"+this.data._id+"?dataName="+this.dataName)
+        }
+    }
 }
 </script>
 
@@ -25,6 +40,8 @@ export default {
         h3{
             font:.32rem/.48rem "";
             font-weight: 600;
+            font-size: .32rem;
+            line-height: .48rem;
         }
         .bottom{
             display: flex;

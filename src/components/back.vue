@@ -1,7 +1,7 @@
 <template>
 <div class="back">
-    <i></i>
-    <div class="back_title">
+    <i @click="back"></i>
+    <div class="back_title" v-show="hide">
         <span>默认收藏</span>
         <span>本地收藏</span>
     </div>
@@ -12,7 +12,17 @@
 
 <script>
 export default {
-    
+    props:{
+        hide:{
+            type:Boolean,
+            default:false
+        }
+    },
+    methods: {
+        back(){
+            this.$router.go(-1)
+        }
+    },
 }
 </script>
 

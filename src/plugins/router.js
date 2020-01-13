@@ -8,6 +8,9 @@ import Collect from '../pages/collect'
 import CrossTalk from '../pages/crossTalk'
 import NoPage from '../pages/404'
 import User from '../pages/user'
+import Login from '../pages/login'
+import Reg from '../pages/reg'
+import Detail from '../pages/detail'
 
 let routes = [
     {
@@ -31,6 +34,21 @@ let routes = [
         component:User
     },
     {
+        path:'/reg',
+        name:"Reg",
+        component:Reg
+    },
+    {
+        path:'/login',
+        name:"Login",
+        component:Login
+    },
+    {
+        path:'/detail/:_id',
+        name:"Detail",
+        component:Detail
+    },
+    {
         path:"/",
         redirect:"/home"
     },
@@ -42,11 +60,10 @@ let routes = [
 
 let router = new VueRouter({
     mode:"history",
-    routes
+    routes,
 })
 
 export default router;
-
 
 
 

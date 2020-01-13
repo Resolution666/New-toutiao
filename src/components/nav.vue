@@ -36,6 +36,8 @@ export default {
             overflow: auto;
             li{
                 font:.32rem/.7rem "";color:#000000;
+                font-size: .32rem;
+                line-height: .7rem;
                 margin-left: .2rem;
                 &.active{
                       color:#ff6347;

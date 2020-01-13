@@ -1,16 +1,38 @@
 <template>
     <div class="crossTalk">
-        <DuanZi v-for="n in 10" :key="n" />
+        <Back></Back>
+        <WzCell
+        v-for="(item,index) in list" 
+        :key="index"
+        dataName="crossTalk" 
+        :data="item"
+        />
     </div>
 </template>
 
 
 <script>
-import DuanZi from '../components/duanzi'
+import WzCell from '../components/wz-cell'
+import Back from "../components/back"
 
 export default {
     components:{
-        DuanZi
+        Back,WzCell
+    },
+    data() {
+        return {
+            list:{}
+        }
+    },
+    mounted(){
+        this.$axios({
+            url:"/api/crossTalk",
+            params:{
+                _limit:10
+            }
+        }).then(
+            res => this.list = res.data.data
+        )
     }
 }
 </script>
